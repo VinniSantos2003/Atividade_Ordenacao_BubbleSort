@@ -22,13 +22,25 @@ int main(){
         op = menu();
         switch(op){
         case 1:
-
+            cout<<"Digite um numero a ser procurado no vetor: ";
+            cin >> dado;
+            if(buscaSequencial(v,&tamanho,dado)){
+                cout << "\nDado encontrado\n";
+            }else{
+                cout << "\nDado nao encontrado\n";
+            }
             break;
         case 2:
-            
+            cout<<"Digite um numero a ser procurado no vetor: ";
+            cin >> dado;
+            if(buscaBinaria(v,&tamanho,dado)){
+                cout << "\nDado encontrado\n";
+            }else{
+                cout << "\nDado nao encontrado\n";  
+            }
             break;
         case 3:
-
+            ordenaBubbleSort(v,&tamanho);
             break;
         case 4:
             cout << "Digite um numero para ser inserido no inicio vetor: " ;
